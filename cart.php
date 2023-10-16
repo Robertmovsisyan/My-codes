@@ -1,3 +1,65 @@
+<?php
+		$mysqli = mysqli_connect('localhost', 'root' , 'Rob.1323' , 'xpod') ;
+		if(!$mysqli){
+			die('Connect error'.mysqli_connect_error()) ;  
+		}
+		
+		
+	/*	if (isset($_POST['qty'])) {
+			$qty = $_POST['qty'];
+			
+			echo  $qty;
+		} else {
+			echo  "not received.";
+		}*/
+		
+		
+	
+		
+		if(isset($_GET['id'])){
+		$query = 'SELECT * FROM main_product WHERE id="'.$_GET['id'].'"' ; 
+		$result = mysqli_query($mysqli,$query) ; 
+		$row = mysqli_fetch_assoc($result);
+		
+        $query='INSERT INTO cart(name,image,sum,product_id) VALUES("'.$row['name'].'","'.$row['image'].'","'.$row['sum'].'","'.$_GET['id'].'")';
+		$result = mysqli_query($mysqli,$query) ;
+
+
+		}
+	
+
+	/*session_start();
+	if(isset($_GET['id'])){
+			$query = 'SELECT * FROM main_product WHERE id="'.$_GET['id'].'"' ; 
+			$result = mysqli_query($mysqli,$query) ; 
+			$row = mysqli_fetch_assoc($result);
+		if(isset($_SESSION['cart'])){
+			$sessiom_array_id=array_column($_SESSION['cart'],"id");
+
+
+			if(!in_array($_GET['id'],$sessiom_array_id)){
+				$sessiom_array=array(
+					'id'=>$_GET['id'],
+					'name'=>$row['name'],
+					'image'=>$row['image'],
+					'sum'=>$row['sum']
+				);
+				$_SESSION['cart'][]=$sessiom_array;
+			}
+		}else{	
+		
+ 
+			$sessiom_array=array(
+				'id'=>$_GET['id'],
+				'name'=>$row['name'],
+				'image'=>$row['image'],
+				'sum'=>$row['sum']
+			);
+			$_SESSION['cart'][]=$sessiom_array;
+
+	}
+}*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,7 +80,7 @@
 	<body>
 
 		<!-- Start preloader -->
-		<div id="preloader"></div>
+		<!--<div id="preloader"></div>-->
 		<!-- End preloader -->
 
 		<!-- Search Screen start -->
@@ -43,7 +105,7 @@
 					<div class="row">
 						<div class="col-lg-2 col-md-4 col-6 align-flax">
 				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
+					            <a class="navbar-brand" href="indexx.php">
 					                <img alt="logo" src="images/logo.png" class="transition">
 					            </a> 
 				            </div>
@@ -53,7 +115,7 @@
 						        <div class="menu" >
 						            <ul>
 							            <li>
-							                <a href="index.html">Home</a>
+							                <a href="indexx.php">Home</a>
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
@@ -158,7 +220,7 @@
 						        <ul class="login-cart">
 						        	<li>
 						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+								        	<a href="login.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 								        </div>
 						        	</li>
 						        	<li>
@@ -168,17 +230,28 @@
 								        	</div>
 								        	<div class="cart-dropdown header-link-dropdown">
 												<ul class="cart-list link-dropdown-list">
+												<?php 
+	                                 // if(!empty($_SESSION['cart'])){
+                                       // foreach($_SESSION['cart'] as $key =>$value){
+
+							
+										$query = 'SELECT * FROM cart WHERE product_id = ' . $_GET['id'] . ' LIMIT 2';
+										$result=mysqli_query($mysqli,$query);
+
+									   while($row1=mysqli_fetch_assoc($result)){
+										
+									?>
 													<li> 
-													  	<a href="javascript:void(0)" class="close-cart"><i class="fa fa-times-circle"></i></a>
+													  	<a href="cart.php?id=<?php echo $row1['id']; ?>" class="close-cart"><i class="fa fa-times-circle"></i></a>
 													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
-													    		<img alt="product" src="images/product-1.jpg">
+													    	<a href="product-detail.php?id=<?php echo $row1['id']?>" class="pull-left"> 
+													    		<img alt="product" src="php/product-img/<?php echo $row1['image'];?>">
 													    	</a>
 													      	<figcaption> 
 													      		<span>
-													      			<a href="product-detail.html">Men's Full Sleeves Collar Shirt</a>
+													      			<a href="product-detail.php?id=<?php echo $row1['id']?>"><?php echo $row1['name']?></a>
 													      		</span>
-													        	<p class="cart-price">$14.99</p>
+													        	<p class="cart-price"><?php echo $row1['sum']?></p>
 													        	<div class="product-qty">
 													          		<label>Qty:</label>
 													          		<div class="custom-qty">
@@ -188,26 +261,24 @@
 													      	</figcaption>
 													    </figure>
 													</li>
-													<li> 
-														<a class="close-cart"><i class="fa fa-times-circle"></i></a>
-													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
-													    		<img alt="product" src="images/product-2.jpg">
-													    	</a>
-													      	<figcaption> 
-													      		<span>
-													      			<a href="product-detail.html">Women's Cape Jacket</a>
-													      		</span>
-													        	<p class="cart-price">$14.99</p>
-													        	<div class="product-qty">
-													          		<label>Qty:</label>
-													          		<div class="custom-qty">
-													            		<input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
-													          		</div>
-													        	</div>
-													      	</figcaption>
-													    </figure>
-													</li>
+													<?php 
+									   }
+												/*	}
+												}
+												
+												if(isset($_GET['action'])){
+									
+													if($_GET['action']== "remove"){
+														foreach($_SESSION['cart'] as $key => $value){
+															if($value['id']==$_GET['id']){
+																unset($_SESSION['cart'][$key]);
+																
+															}
+															}
+													}
+												}*/
+
+												?>
 												</ul>
 												<p class="cart-sub-totle"> 
 													<span class="pull-left">Cart Subtotal</span> 
@@ -215,7 +286,7 @@
 												</p>
 												<div class="clearfix"></div>
 												<div class="mt-20"> 
-													<a href="cart.html" class="btn">Cart</a> 
+													<a href="cart.php" class="btn">Cart</a> 
 													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
 												</div>
 											</div>
@@ -237,7 +308,7 @@
 							</div>
 							<div class="col-xl-6 col-lg-6 col-12">
 								<ul class="right-side">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="indexx.php">Home</a></li>
 									<li>Cart</li>
 								</ul>
 							</div>
@@ -261,20 +332,29 @@
 									</tr>
 								</thead>
 								<tbody>
+									<?php 
+	                                //  if(!empty($_SESSION['cart'])){
+                                      //  foreach($_SESSION['cart'] as $key =>$value){
+										
+										$query='SELECT * FROM cart ';
+									   $result=mysqli_query($mysqli,$query);
+
+									   while($row1=mysqli_fetch_assoc($result)){
+									?>
 									<tr>
 										<td class="text-left">
 											<div class="seller-box align-flax w-100">
 												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-1.jpg" alt="shoes" class="transition">
+													<a href="product-detail.php" class="display-b">
+														<img src="php/product-img/<?php echo $row1['image'];?>" alt="shoes" class="transition">
 													</a>
 												</div>
 												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
+													<a href="product-detail.php?id=<?php echo $row1['id']?>" class="product-name text-uppercase"><?php echo $row1['name'];?></a>
 												</div>
 											</div>
 										</td>
-										<td><span class="price">$70.00</span></td>
+										<td><span class="price"><?php echo $row1['sum']?></span></td>
 										<td>
 											<select data-id="100" class="quantity_cart" name="quantity_cart">
 					                          	<option selected="" value="1">1</option>
@@ -283,45 +363,24 @@
 					                          	<option value="4">4</option>
 					                        </select>
 										</td>
-										<td><span class="price">$70.00</span></td>
+										<td><span class="price"><?php echo $row1['sum']?></span></td>
 										<td>
 											<ul>
-												<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
+												<li><a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+											
+												<li><a href="cart.php?id=<?php echo $row1['product_id']; ?>" class="remove" data-product-id="<?php echo $row1['product_id']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
+											
 											</ul>
 										</td>
-									</tr>
-									<tr>
-										<td class="text-left">
-											<div class="seller-box align-flax w-100">
-												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-2.jpg" alt="shoes" class="transition">
-													</a>
-												</div>
-												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">Dignissim Venenatis</a>
-												</div>
-											</div>
-										</td>
-										<td><span class="price">$80.00</span></td>
-										<td>
-											<select data-id="100" class="quantity_cart" name="quantity_cart">
-					                          	<option value="1">1</option>
-					                          	<option selected="" value="2">2</option>
-					                          	<option value="3">3</option>
-					                          	<option value="4">4</option>
-					                        </select>
-										</td>
-										<td><span class="price">$160.00</span></td>
-										<td>
-											<ul>
-												<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</td>
-									</tr>
-								</tbody>
+									</tr> 
+									<?php
+									   }
+									
+								
+									?>
+
+
+									</tbody>
 							</table>
 						</div>
 						<div class="row">
@@ -446,7 +505,7 @@
 					<div class="footer-inner">
 						<div class="footer-box">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="indexx.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
 						</div>
@@ -516,6 +575,24 @@
 	
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/custom.js"></script>
+		<script>
+			$(document).ready(function () {
+    $(".remove").click(function () {
+        var productId = $(this).data("product-id");
+
+        $.ajax({
+            type: "POST",
+            url: "php/removecart.php",
+            data: { product_id: productId },
+            success: function (response) {
+                alert('do you want remove it');
+            }
+        });
+    });
+});
+
+
+		</script>
 	</body>
 
 </html>

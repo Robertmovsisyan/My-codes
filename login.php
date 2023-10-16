@@ -18,7 +18,7 @@
 	<body>
 
 		<!-- Start preloader -->
-		<div id="preloader"></div>
+		<!--<div id="preloader"></div>-->
 		<!-- End preloader -->
 
 		<!-- Search Screen start -->
@@ -158,7 +158,7 @@
 						        <ul class="login-cart">
 						        	<li>
 						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+								        	<a href="login.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 								        </div>
 						        	</li>
 						        	<li>
@@ -250,14 +250,14 @@
 				<div class="container">
 					<div class="billing-details">
 						<h2 class="checkout-title text-uppercase text-center mb-30">CUSTOMER LOGIN</h2>
-						<form class="checkout-form">
+						<form class="checkout-form" method="post" action="php/regi.php">
 							<div class="form-group">
 								<label class="form-label">Email address</label>
-								<input type="text" class="form-control" placeholder="Email Address" required>
+								<input type="text" class="form-control" name="user" placeholder="Email Address" required>
 							</div>
 							<div class="form-group">
 								<label class="form-label">Password</label>
-								<input type="password" class="form-control" placeholder="Enter your Password" required>
+								<input type="password" class="form-control" name="user_pass" placeholder="Enter your Password" required>
 							</div>
 							<div class="login-btn-g">
 								<div class="row">
@@ -270,8 +270,10 @@
 							            </div>
 							        </div>
 							        <div class="col-6">
-							            <button name="submit" type="submit" class="btn btn-color right-side">Log In</button>
+							            <button name="submit1" type="submit" class="btn btn-color right-side">Log In</button>
 							        </div>
+									<?php if (isset($error)) { echo $error; }?>
+
 							    </div>
 					        </div>
 					        <div class="text-center">
@@ -279,7 +281,7 @@
 					        </div>
 					        <div class="new-account text-center mt-20"> 
 					        	<span>Don't have an account?</span> 
-				                <a class="link" title="Create New Account" href="register.html">Create New Account</a> 
+				                <a class="link" title="Create New Account" href="register.php">Create New Account</a> 
 				            </div>
 						</form>
 					</div>

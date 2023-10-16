@@ -1,3 +1,7 @@
+<?php
+   	session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -159,7 +163,7 @@
 						        <ul class="login-cart">
 						        	<li>
 						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+								        	<a href="login.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 								        </div>
 						        	</li>
 						        	<li>
@@ -169,46 +173,47 @@
 								        	</div>
 								        	<div class="cart-dropdown header-link-dropdown">
 												<ul class="cart-list link-dropdown-list">
+												<?php 
+	                                  if(!empty($_SESSION['cart'])){
+                                        foreach($_SESSION['cart'] as $key =>$value){
+										
+									?>
 													<li> 
-													  	<a href="javascript:void(0)" class="close-cart"><i class="fa fa-times-circle"></i></a>
+													  	<a href="cart.php?action=remove&id=<?php echo $value['id']; ?>" class="close-cart"><i class="fa fa-times-circle"></i></a>
 													    <figure> 
-													    	<a href="product-detail.php" class="pull-left"> 
-													    		<img alt="product" src="images/product-1.jpg">
+													    	<a href="product-detail.php?id=<?php echo $value['id']?>" class="pull-left"> 
+													    		<img alt="product" src="php/product-img/<?php echo $value['image'];?>">
 													    	</a>
 													      	<figcaption> 
 													      		<span>
-													      			<a href="product-detail.php">Men's Full Sleeves Collar Shirt</a>
+													      			<a href="product-detail.php?id=<?php echo $value['id']?>"><?php echo $value['name'];?></a>
 													      		</span>
-													        	<p class="cart-price">$14.99</p>
+													        	<p class="cart-price"><?php echo $value['sum'];?></p>
 													        	<div class="product-qty">
 													          		<label>Qty:</label>
 													          		<div class="custom-qty">
-													            		<input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
+													            		<input type="text" name="qty"  maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
 													          		</div>
 													        	</div>
 													      	</figcaption>
 													    </figure>
 													</li>
-													<li> 
-														<a class="close-cart"><i class="fa fa-times-circle"></i></a>
-													    <figure> 
-													    	<a href="product-detail.php" class="pull-left"> 
-													    		<img alt="product" src="images/product-2.jpg">
-													    	</a>
-													      	<figcaption> 
-													      		<span>
-													      			<a href="product-detail.php">Women's Cape Jacket</a>
-													      		</span>
-													        	<p class="cart-price">$14.99</p>
-													        	<div class="product-qty">
-													          		<label>Qty:</label>
-													          		<div class="custom-qty">
-													            		<input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty" disabled>
-													          		</div>
-													        	</div>
-													      	</figcaption>
-													    </figure>
-													</li>
+												<?php
+												}
+											}
+
+											if(isset($_GET['action'])){
+									
+												if($_GET['action']== "remove"){
+													foreach($_SESSION['cart'] as $key => $value){
+														if($value['id']==$_GET['id']){
+															unset($_SESSION['cart'][$key]);
+															
+														}
+														}
+												}
+											}
+											?>
 												</ul>
 												<p class="cart-sub-totle"> 
 													<span class="pull-left">Cart Subtotal</span> 
@@ -216,7 +221,7 @@
 												</p>
 												<div class="clearfix"></div>
 												<div class="mt-20"> 
-													<a href="cart.html" class="btn">Cart</a> 
+													<a href="cart.php" class="btn">Cart</a> 
 													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
 												</div>
 											</div>
@@ -335,10 +340,12 @@
 				                        			<button type="button" id="sub" class="sub cou-sub">
 				                        				<i class="fa fa-minus" aria-hidden="true"></i>
 				                        			</button>
-    												<input type="number" id="1" class="input-text qty" value="1" min="1" max="3" />
+    												<input type="number" id="qty1" name="qty" class="input-text qty" value="1" min="1" max="3" />
     												<button type="button" id="add" class="add cou-sub">
     													<i class="fa fa-plus" aria-hidden="true"></i>
     												</button>
+													<p id="result"></p>
+
 				                        		</div>
 					                        </div>
 					                        <div class="table-listing qty">
@@ -377,7 +384,9 @@
 					                        <div class="product-action">
 												<ul>
 													<li>
-														<a href="cart.html" class="btn btn-color">
+												
+														<a href="cart.php?id=<?php echo $_GET['id']?>" name="add_cart" id="addToCartButton" class="btn btn-color " data-id="<?php echo $_GET['id'];?>">
+													
 															<img src="images/shop-bag.png" alt="bag">
 															<span>add to cart</span>
 														</a>
@@ -538,7 +547,7 @@
 								</div>
 							</div>
 							<div class="product-desc">
-								<a href="product-detail.php" class="product-name text-uppercase"><?php echo $row['name']?></a>
+								<a href="product-detail.php?id=<?php echo $row['id']?>" class="product-name text-uppercase"><?php echo $row['name']?></a>
 								<span class="product-pricce"><?php echo $row['sum']?></span>
 							</div>
 						</div>
@@ -660,6 +669,39 @@
 	            	isDownloadEnabled: false,
 	            });
 	        });
+
+		/*	$(document).ready(function(){
+             $('.btn-color').click(function(){
+           var productId = $(this).attr("data-id");
+		   $.ajax({
+				type: "POST",
+				url: "cart.php",
+				data: { product_id: productId }, 
+				success: function(response) {
+					alert('Product added successfully');
+				},
+				
+				});
+    
+			 });
+			});*/
+			$(document).ready(function () {
+            $("#addToCartButton").click(function () {
+                var qty = $("#qty1").val();
+                $.ajax({
+                    type: "POST",
+                    url: "cart.php",
+                    data: { qty: qty },
+                    success: function (response) {
+                        $("#result").text("Added to cart: " + response);
+                    }
+                });
+				
+				
+
+            });
+        });
+
 	    </script>
 	</body>
 	

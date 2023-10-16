@@ -18,7 +18,7 @@
 	<body>
 
 		<!-- Start preloader -->
-		<div id="preloader"></div>
+		<!--<div id="preloader"></div>-->
 		<!-- End preloader -->
 
 		<!-- Search Screen start -->
@@ -158,7 +158,7 @@
 						        <ul class="login-cart">
 						        	<li>
 						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+								        	<a href="login.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 								        </div>
 						        	</li>
 						        	<li>
@@ -250,26 +250,28 @@
 				<div class="container">
 					<div class="billing-details">
 						<h2 class="checkout-title text-uppercase text-center mb-30">CREATE ACCOUNT</h2>
-						<form class="checkout-form">
+			
+						<form class="checkout-form" action="php/regi.php" method="post">
+							<input type="hidden" name="id" >
 							<div class="form-group">
 								<label class="form-label">First Name</label>
-								<input type="text" class="form-control" placeholder="First Name" required>
+								<input type="text" class="form-control" name="name" placeholder="First Name" required>
 							</div>
 							<div class="form-group">
 								<label class="form-label">Last Name</label>
-								<input type="password" class="form-control" placeholder="Last Name" required>
+								<input type="text" class="form-control" name="surname" placeholder="Last Name" required>
 							</div>
 							<div class="form-group">
 								<label class="form-label">Email address</label>
-								<input type="text" class="form-control" placeholder="Email Address" required>
+								<input type="text" class="form-control" name="email" placeholder="Email Address" required>
 							</div>
 							<div class="form-group">
 								<label class="form-label">Password</label>
-								<input type="password" class="form-control" placeholder="Enter your Password" required>
+								<input type="password" class="form-control inp_2" name="password" placeholder="Enter your Password" required>
 							</div>
 							<div class="form-group">
 								<label class="form-label">Re-enter Password</label>
-								<input type="password" class="form-control" placeholder="Re-enter Password" required>
+								<input type="password" class="form-control inp_3" name="conf_password" placeholder="Re-enter Password" required>
 							</div>
 							<div class="login-btn-g">
 								<div class="row">
@@ -288,7 +290,7 @@
 					        </div>
 					        <div class="new-account text-center mt-20"> 
 					        	<span>Already have an account with us</span> 
-				                <a class="link" title="Create New Account" href="login.html">Login Here</a> 
+				                <a class="link" title="Create New Account" href="login.php">Login Here</a> 
 				            </div>
 						</form>
 					</div>
@@ -392,6 +394,10 @@
 	
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/custom.js"></script>
+		<script>
+	
+		
+	</script>
 	</body>
 
 </html>
