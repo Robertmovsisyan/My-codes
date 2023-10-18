@@ -348,11 +348,11 @@
 										<span class="text-uppercase">New</span>
 									</div>
 									<div class="product-details-btn text-uppercase text-center transition">
-										<a href="product-quick-view.html" class="quick-popup mfp-iframe">Quick View</a>
+										<a href="product-quick-view.php?id=<?php echo $row['id']?>" class="quick-popup mfp-iframe">Quick View</a>
 									</div>
 								</div>
 								<div class="product-desc">
-									<a href="product-detail.php" class="product-name text-uppercase"><?php echo $row['name']?></a>
+									<a href="product-detail.php?id=<?php echo $row['id']?>" class="product-name text-uppercase"><?php echo $row['name']?></a>
 									<span class="product-pricce"><?php echo $row['sum']?></span>
 								</div>
 							</div>
@@ -712,7 +712,7 @@
 					<div class="footer-inner">
 						<div class="footer-box">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="indexx.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
 						</div>
@@ -722,7 +722,7 @@
 							<ul class="footer-block-contant">
 								<li><a href="#">My Account</a></li>
 								<li><a href="#">Order History</a></li>
-								<li><a href="wishlist.html">Wish List</a></li>
+								<li><a href="wishlist.php">Wish List</a></li>
 								<li><a href="#">Newsletter</a></li>
 								<li><a href="#">Site Map</a></li>
 								<li><a href="#">Gift Certificates</a></li>

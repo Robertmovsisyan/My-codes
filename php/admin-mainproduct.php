@@ -111,7 +111,7 @@ $description=$row11['description'];
 		<label>name<input name = 'name' type = 'text' value = '<?php echo $name ?> ' class="input"></label>
 		<label>Price<input name = 'sum' type = 'text' value = '<?php echo $sum ;?>  'class="input"></label>
 
-		<label>Sales Price<input name = 'old_sum' type = 'text' value = '<?php echo $old_sum ?>  'class="input"></label>
+		<label>Sales Price<input name = 'old_sum' type = 'text' class="input" value = '<?php echo $old_sum ?>  ' ></label>
 		<label>main_description<input name = 'main_text' type = 'text' value = '<?php echo $main_text ;?>  'class="input"></label>
            <div class="ok">
 		<label>subject<input name = 'sub1[]' type = 'text' class="input"></label>
@@ -120,7 +120,7 @@ $description=$row11['description'];
 		<div class="addsubj"></div>
 
 		<?php echo $subj; ?>
-
+         <img src="product-img/<?php echo $image?>" alt="dfvv" width="150" height="150">
 		<label>Image<input name = 'image'  type = 'file' class="image"></label>
 <div class="hide">
 		<label>Hide:<input name = 'hide_show' type = 'radio' value = '0' ></label>

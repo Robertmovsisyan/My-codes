@@ -1,23 +1,19 @@
 <?php
-if (isset($_POST['product_id'])) {
-    $productId = $_POST['product_id'];
 
-    $connection = mysqli_connect("localhost", "root", "Rob.1323", "xpod");
+$mysqli = mysqli_connect('localhost', 'root' , 'Rob.1323' , 'xpod') ;
+if(!$mysqli){
+    die('Connect error'.mysqli_connect_error()) ;  
+} 
 
-    if (!$connection) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
 
-    $sql = "DELETE FROM cart WHERE product_id = $productId";
+if (isset($_GET["id"])) {
 
-    if (mysqli_query($connection, $sql)) {
-        echo "Item removed successfully";
-    } else {
-        echo "Error: " . mysqli_error($connection);
-    }
 
-    mysqli_close($connection);
-} else {
-    echo "Invalid request";
-}
+
+    $query = 'DELETE FROM cart WHERE product_id ="'.$_GET['id'].'" ';
+    mysqli_query($mysqli,$query) ; 
+    header('Location:../cart.php');
+} 
+
+
 ?>

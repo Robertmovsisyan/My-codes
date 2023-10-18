@@ -69,7 +69,7 @@
 							                			<li><a href="about.html">About Us</a></li>
 									                    <li><a href="shop-list.html">Shop List</a></li>
 									                    <li><a href="product-detail.php">Product Detail</a></li>
-									                    <li><a href="wishlist.html">Wishlist</a></li>
+									                    <li><a href="wishlist.php">Wishlist</a></li>
 									                    <li><a href="404.html">404</a></li>
 									                </ul>
 							                	</div>
@@ -340,7 +340,7 @@
 				                        			<button type="button" id="sub" class="sub cou-sub">
 				                        				<i class="fa fa-minus" aria-hidden="true"></i>
 				                        			</button>
-    												<input type="number" id="qty1" name="qty" class="input-text qty" value="1" min="1" max="3" />
+    												<input type="number" id="qty1" name="qty" class="input-text qty" data-id="<?php echo $_GET['id']?>" value="1" min="1" max="3" />
     												<button type="button" id="add" class="add cou-sub">
     													<i class="fa fa-plus" aria-hidden="true"></i>
     												</button>
@@ -391,7 +391,7 @@
 															<span>add to cart</span>
 														</a>
 													</li>
-													<li><a href="wishlist.html" class="btn"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+													<li><a href="wishlist.php?id=<?php echo $_GET['id']?>" class="btn"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 												</ul>
 											</div>
 				                        </div>
@@ -543,7 +543,7 @@
 									<span class="text-uppercase">New</span>
 								</div>
 								<div class="product-details-btn text-uppercase text-center transition">
-									<a href="product-quick-view.html" class="quick-popup">Quick View</a>
+									<a href="product-quick-view.php?id=<?php echo $row['id']?>" class="quick-popup">Quick View</a>
 								</div>
 							</div>
 							<div class="product-desc">
@@ -598,7 +598,7 @@
 							<ul class="footer-block-contant">
 								<li><a href="#">My Account</a></li>
 								<li><a href="#">Order History</a></li>
-								<li><a href="wishlist.html">Wish List</a></li>
+								<li><a href="wishlist.php">Wish List</a></li>
 								<li><a href="#">Newsletter</a></li>
 								<li><a href="#">Site Map</a></li>
 								<li><a href="#">Gift Certificates</a></li>
@@ -670,37 +670,36 @@
 	            });
 	        });
 
-		/*	$(document).ready(function(){
-             $('.btn-color').click(function(){
-           var productId = $(this).attr("data-id");
-		   $.ajax({
-				type: "POST",
-				url: "cart.php",
-				data: { product_id: productId }, 
-				success: function(response) {
-					alert('Product added successfully');
-				},
-				
-				});
-    
-			 });
-			});*/
-			$(document).ready(function () {
-            $("#addToCartButton").click(function () {
-                var qty = $("#qty1").val();
-                $.ajax({
-                    type: "POST",
-                    url: "cart.php",
-                    data: { qty: qty },
-                    success: function (response) {
-                        $("#result").text("Added to cart: " + response);
-                    }
-                });
-				
-				
-
-            });
+			//$(document).ready(function() {
+    // Use event delegation to ensure the click event works for dynamically added elements
+   /* $(document).on('click', '.btn-color', function() {
+        var product_id = $(this).attr("data-id");
+        $.ajax({
+            type: "GET",
+            url: "cart.php",
+            data: { product_id: product_id },
+            success: function(response) {
+                alert('Product added successfully');
+            }
         });
+    });
+});*/
+
+/*$(document).ready(function() {
+    $('.qty').on('change', function() {
+        var productId = $(this).data("id");
+        var quantity = $(this).val();
+        
+        $.ajax({
+            type: "POST",
+            url: "cart.php",
+            data: { product_id: productId, quantity: quantity },
+            success: function(response) {
+                alert('Product added successfully');
+            }
+        });
+    });
+});*/
 
 	    </script>
 	</body>

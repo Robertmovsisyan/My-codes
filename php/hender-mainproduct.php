@@ -37,7 +37,7 @@
 
 
      if(empty($id)){
-         $query = "INSERT INTO main_product(name,sum,old_sum,main_text,image,hide_show)  VALUES('".$name."','".$sum."', '".$old_sum."','".$main_text."','".$image."','".$hide_show."')";        
+         $query = 'INSERT INTO main_product (name,sum,old_sum,main_text,image,hide_show)  VALUES("'.$name.'","'.$sum.'", "'.$old_sum.'","'.$main_text.'","'.$image.'","'.$hide_show.'")';        
           $result = mysqli_query($mysqli,$query) ; 
           $y=mysqli_insert_id($mysqli);
             $l=count($_FILES['imgs']['name']);
@@ -125,7 +125,6 @@
          
          
      }
-         
  } 
  
  if(isset($_POST['delete'])){
@@ -166,5 +165,7 @@
     $result = mysqli_query($mysqli,$query) ;
     echo true;
  }
- //header('Location:admin-mainproduct.php');
+ 
+ 
+
 ?>

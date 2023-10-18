@@ -4,26 +4,25 @@
 			die('Connect error'.mysqli_connect_error()) ;  
 		}
 		
+	
+		/*if (isset($_POST['product_id']) && isset($_POST['quantity'])) {
+			$product_id = $_POST['product_id'];
+			$quantity = $_POST['quantity'];
 		
-	/*	if (isset($_POST['qty'])) {
-			$qty = $_POST['qty'];
-			
-			echo  $qty;
+			echo "Product added to cart successfully";
 		} else {
-			echo  "not received.";
+			echo "Invalid parameters";
 		}*/
 		
-		
+		if (isset($_GET['id'])) {
+	     $query = 'SELECT * FROM main_product WHERE id="'.$_GET['id'].'"' ; 
 	
-		
-		if(isset($_GET['id'])){
-		$query = 'SELECT * FROM main_product WHERE id="'.$_GET['id'].'"' ; 
 		$result = mysqli_query($mysqli,$query) ; 
 		$row = mysqli_fetch_assoc($result);
-		
+
+
         $query='INSERT INTO cart(name,image,sum,product_id) VALUES("'.$row['name'].'","'.$row['image'].'","'.$row['sum'].'","'.$_GET['id'].'")';
 		$result = mysqli_query($mysqli,$query) ;
-
 
 		}
 	
@@ -119,14 +118,14 @@
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Pages</a>
+							                <a href="shop.php">Pages</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
 							                			<li><a href="about.html">About Us</a></li>
-									                    <li><a href="shop-list.html">Shop List</a></li>
-									                    <li><a href="product-detail.html">Product Detail</a></li>
-									                    <li><a href="wishlist.html">Wishlist</a></li>
+									                    <li><a href="shop-list.php">Shop List</a></li>
+									                    <li><a href="product-detail.php">Product Detail</a></li>
+									                    <li><a href="wishlist.php">Wishlist</a></li>
 									                    <li><a href="404.html">404</a></li>
 									                </ul>
 							                	</div>
@@ -134,7 +133,7 @@
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Shop</a>
+							                <a href="shop.php">Shop</a>
 							                <div class="megamenu full">
 							                	<div class="megamenu-inner">
 							                		<div class="row">
@@ -142,7 +141,7 @@
 							                				<div class="shop-img-in">
 							                					<div class="row">
 							                						<div class="col-xl-12 col-lg-12 col-md-12 pb-10">
-							                							<a href="product-detail.html" class="img-drop-bottom">
+							                							<a href="product-detail.php" class="img-drop-bottom">
 							                								<img src="images/menu.jpg" class="transition" alt="img">
 							                							</a>
 							                						</div>
@@ -150,39 +149,39 @@
 							                				</div>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Chap Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Chap Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Fashion Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Fashion Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Opinga</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                            <li><a href="shop.html">Driving Moccasins</a></li>
-									                            <li><a href="shop.html">High Heeled</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
+									                            <li><a href="shop.php">Opinga</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
+									                            <li><a href="shop.php">Driving Moccasins</a></li>
+									                            <li><a href="shop.php">High Heeled</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Product Types</a>
+							                				<a href="shop.php" class="megamenu-title">Product Types</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                		</div>
@@ -235,7 +234,7 @@
                                        // foreach($_SESSION['cart'] as $key =>$value){
 
 							
-										$query = 'SELECT * FROM cart WHERE product_id = ' . $_GET['id'] . ' LIMIT 2';
+										$query = 'SELECT * FROM cart WHERE product_id="'.$_GET['id'].'" ';
 										$result=mysqli_query($mysqli,$query);
 
 									   while($row1=mysqli_fetch_assoc($result)){
@@ -368,7 +367,7 @@
 											<ul>
 												<li><a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 											
-												<li><a href="cart.php?id=<?php echo $row1['product_id']; ?>" class="remove" data-product-id="<?php echo $row1['product_id']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
+												<li><a href="php/removecart.php?id=<?php echo $row1['product_id']; ?>" class="remove" data-product-id="<?php echo $row1['product_id']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
 											
 											</ul>
 										</td>
@@ -386,7 +385,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="share-wishlist shoping-con">
-									<a href="shop.html" class="btn"><i class="fa fa-angle-left"></i> Continue Shopping</a>
+									<a href="shop.php" class="btn"><i class="fa fa-angle-left"></i> Continue Shopping</a>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -515,7 +514,7 @@
 							<ul class="footer-block-contant">
 								<li><a href="#">My Account</a></li>
 								<li><a href="#">Order History</a></li>
-								<li><a href="wishlist.html">Wish List</a></li>
+								<li><a href="wishlist.php">Wish List</a></li>
 								<li><a href="#">Newsletter</a></li>
 								<li><a href="#">Site Map</a></li>
 								<li><a href="#">Gift Certificates</a></li>
@@ -576,7 +575,7 @@
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/custom.js"></script>
 		<script>
-			$(document).ready(function () {
+		/*	$(document).ready(function () {
     $(".remove").click(function () {
         var productId = $(this).data("product-id");
 
@@ -585,11 +584,11 @@
             url: "php/removecart.php",
             data: { product_id: productId },
             success: function (response) {
-                alert('do you want remove it');
+
             }
         });
     });
-});
+});*/
 
 
 		</script>

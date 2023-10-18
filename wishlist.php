@@ -1,3 +1,24 @@
+<?php 
+						$mysqli=mysqli_connect('localhost','root','Rob.1323','xpod');
+						   if(!$mysqli){
+		                          die("Connect error".mysqli_connect_error()); 
+		
+	                       }
+						
+
+if (isset($_GET['id'])) {
+	     $query = 'SELECT * FROM main_product WHERE id="'.$_GET['id'].'"' ; 
+	
+		$result = mysqli_query($mysqli,$query) ; 
+		$row = mysqli_fetch_assoc($result);
+
+
+        $query='INSERT INTO favorite(name,image,sum,product_id) VALUES("'.$row['name'].'","'.$row['image'].'","'.$row['sum'].'","'.$_GET['id'].'")';
+		$result = mysqli_query($mysqli,$query) ;
+
+		}
+	   ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,7 +39,7 @@
 	<body>
 
 		<!-- Start preloader -->
-		<div id="preloader"></div>
+		<!--<div id="preloader"></div>-->
 		<!-- End preloader -->
 
 		<!-- Search Screen start -->
@@ -43,7 +64,7 @@
 					<div class="row">
 						<div class="col-lg-2 col-md-4 col-6 align-flax">
 				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
+					            <a class="navbar-brand" href="indexx.php">
 					                <img alt="logo" src="images/logo.png" class="transition">
 					            </a> 
 				            </div>
@@ -53,18 +74,18 @@
 						        <div class="menu" >
 						            <ul>
 							            <li>
-							                <a href="index.html">Home</a>
+							                <a href="indexx.php">Home</a>
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Pages</a>
+							                <a href="shop.php">Pages</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
 							                			<li><a href="about.html">About Us</a></li>
-									                    <li><a href="shop-list.html">Shop List</a></li>
-									                    <li><a href="product-detail.html">Product Detail</a></li>
-									                    <li><a href="wishlist.html">Wishlist</a></li>
+									                    <li><a href="shop-list.php">Shop List</a></li>
+									                    <li><a href="product-detail.php">Product Detail</a></li>
+									                    <li><a href="wishlist.php">Wishlist</a></li>
 									                    <li><a href="404.html">404</a></li>
 									                </ul>
 							                	</div>
@@ -72,7 +93,7 @@
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Shop</a>
+							                <a href="shop.php">Shop</a>
 							                <div class="megamenu full">
 							                	<div class="megamenu-inner">
 							                		<div class="row">
@@ -80,7 +101,7 @@
 							                				<div class="shop-img-in">
 							                					<div class="row">
 							                						<div class="col-xl-12 col-lg-12 col-md-12 pb-10">
-							                							<a href="product-detail.html" class="img-drop-bottom">
+							                							<a href="product-detail.php" class="img-drop-bottom">
 							                								<img src="images/menu.jpg" class="transition" alt="img">
 							                							</a>
 							                						</div>
@@ -88,39 +109,39 @@
 							                				</div>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Chap Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Chap Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Fashion Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Fashion Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Opinga</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                            <li><a href="shop.html">Driving Moccasins</a></li>
-									                            <li><a href="shop.html">High Heeled</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
+									                            <li><a href="shop.php">Opinga</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
+									                            <li><a href="shop.php">Driving Moccasins</a></li>
+									                            <li><a href="shop.php">High Heeled</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Product Types</a>
+							                				<a href="shop.php" class="megamenu-title">Product Types</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                		</div>
@@ -158,7 +179,7 @@
 						        <ul class="login-cart">
 						        	<li>
 						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+								        	<a href="login.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 								        </div>
 						        	</li>
 						        	<li>
@@ -171,12 +192,12 @@
 													<li> 
 													  	<a href="javascript:void(0)" class="close-cart"><i class="fa fa-times-circle"></i></a>
 													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
+													    	<a href="product-detail.php" class="pull-left"> 
 													    		<img alt="product" src="images/product-1.jpg">
 													    	</a>
 													      	<figcaption> 
 													      		<span>
-													      			<a href="product-detail.html">Men's Full Sleeves Collar Shirt</a>
+													      			<a href="product-detail.php">Men's Full Sleeves Collar Shirt</a>
 													      		</span>
 													        	<p class="cart-price">$14.99</p>
 													        	<div class="product-qty">
@@ -191,12 +212,12 @@
 													<li> 
 														<a class="close-cart"><i class="fa fa-times-circle"></i></a>
 													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
+													    	<a href="product-detail.php" class="pull-left"> 
 													    		<img alt="product" src="images/product-2.jpg">
 													    	</a>
 													      	<figcaption> 
 													      		<span>
-													      			<a href="product-detail.html">Women's Cape Jacket</a>
+													      			<a href="product-detail.php">Women's Cape Jacket</a>
 													      		</span>
 													        	<p class="cart-price">$14.99</p>
 													        	<div class="product-qty">
@@ -215,8 +236,8 @@
 												</p>
 												<div class="clearfix"></div>
 												<div class="mt-20"> 
-													<a href="cart.html" class="btn">Cart</a> 
-													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
+													<a href="cart.php" class="btn">Cart</a> 
+													<a href="checkout.php" class="btn btn-color right-side">Checkout</a> 
 												</div>
 											</div>
 								        </div>
@@ -237,7 +258,7 @@
 							</div>
 							<div class="col-xl-6 col-lg-6 col-12">
 								<ul class="right-side">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="indexx.php">Home</a></li>
 									<li>Wishlist</li>
 								</ul>
 							</div>
@@ -260,52 +281,43 @@
 									</tr>
 								</thead>
 								<tbody>
+									<?php
+                                 
+										$query = 'SELECT * FROM favorite';
+										$result=mysqli_query($mysqli,$query);
+
+									   while($row1=mysqli_fetch_assoc($result)){
+										
+									?>
+								
 									<tr>
 										<td class="text-left">
 											<div class="seller-box align-flax w-100">
 												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-1.jpg" alt="shoes" class="transition">
+													<a href="product-detail.php?id=<?php echo $row1['product_id']?>" class="display-b">
+														<img src="php/product-img/<?php echo $row1['image']?>" alt="shoes" class="transition">
 													</a>
 												</div>
 												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-													<a href="#" class="close-table">x</a>
+													<a href="product-detail.php?id=<?php  echo $row1['product_id']?>" class="product-name text-uppercase"><?php echo $row1['name']?></a>
+													<a href="php/remove-favorite.php?id=<?php echo $row1['product_id']?>" class="close-table">x</a>
 												</div>
 											</div>
 										</td>
 										<td>In Stock</td>
-										<td><span class="price">$478.00</span></td>
+										<td><span class="price"><?php echo $row1['sum']?></span></td>
 										<td>
 											<ul>
-												<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
+												<li><a href="cart.php?id=<?php echo $row1['product_id']?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+												<li><a href="php/remove-favorite.php?id=<?php echo $row1['product_id']?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
 											</ul>
 										</td>
 									</tr>
-									<tr>
-										<td class="text-left">
-											<div class="seller-box align-flax w-100">
-												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
-														<img src="images/product-1.jpg" alt="shoes" class="transition">
-													</a>
-												</div>
-												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-													<a href="#" class="close-table">x</a>
-												</div>
-											</div>
-										</td>
-										<td>In Stock</td>
-										<td><span class="price">$478.00</span></td>
-										<td>
-											<ul>
-												<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</td>
-									</tr>
+								
+
+                                  <?php
+									   }
+                              ?>
 								</tbody>
 							</table>
 						</div>
@@ -343,7 +355,7 @@
 					<div class="footer-inner">
 						<div class="footer-box">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="indexx.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
 						</div>
@@ -353,7 +365,7 @@
 							<ul class="footer-block-contant">
 								<li><a href="#">My Account</a></li>
 								<li><a href="#">Order History</a></li>
-								<li><a href="wishlist.html">Wish List</a></li>
+								<li><a href="wishlist.php">Wish List</a></li>
 								<li><a href="#">Newsletter</a></li>
 								<li><a href="#">Site Map</a></li>
 								<li><a href="#">Gift Certificates</a></li>

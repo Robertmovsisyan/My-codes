@@ -1,3 +1,9 @@
+<?php 
+	$mysqli = mysqli_connect('localhost', 'root' , 'Rob.1323' , 'xpod') ;
+	if(!$mysqli){
+		die('Connect error'.mysqli_connect_error()) ;  
+	} 
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,7 +25,7 @@
 	<body>
 
 		<!-- Start preloader -->
-		<div id="preloader"></div>
+		<!--<div id="preloader"></div>-->
 		<!-- End preloader -->
 
 		<!-- Search Screen start -->
@@ -44,7 +50,7 @@
 					<div class="row">
 						<div class="col-lg-2 col-md-4 col-6 align-flax">
 				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
+					            <a class="navbar-brand" href="indexx.php">
 					                <img alt="logo" src="images/logo.png" class="transition">
 					            </a> 
 				            </div>
@@ -54,18 +60,18 @@
 						        <div class="menu" >
 						            <ul>
 							            <li>
-							                <a href="index.html">Home</a>
+							                <a href="indexx.php">Home</a>
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Pages</a>
+							                <a href="shop.php">Pages</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
 							                			<li><a href="about.html">About Us</a></li>
-									                    <li><a href="shop-list.html">Shop List</a></li>
-									                    <li><a href="product-detail.html">Product Detail</a></li>
-									                    <li><a href="wishlist.html">Wishlist</a></li>
+									                    <li><a href="shop-list.php">Shop List</a></li>
+									                    <li><a href="product-detail.php">Product Detail</a></li>
+									                    <li><a href="wishlist.php">Wishlist</a></li>
 									                    <li><a href="404.html">404</a></li>
 									                </ul>
 							                	</div>
@@ -73,7 +79,7 @@
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Shop</a>
+							                <a href="shop.php">Shop</a>
 							                <div class="megamenu full">
 							                	<div class="megamenu-inner">
 							                		<div class="row">
@@ -81,7 +87,7 @@
 							                				<div class="shop-img-in">
 							                					<div class="row">
 							                						<div class="col-xl-12 col-lg-12 col-md-12 pb-10">
-							                							<a href="product-detail.html" class="img-drop-bottom">
+							                							<a href="product-detail.php" class="img-drop-bottom">
 							                								<img src="images/menu.jpg" class="transition" alt="img">
 							                							</a>
 							                						</div>
@@ -89,39 +95,39 @@
 							                				</div>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Chap Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Chap Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Fashion Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Fashion Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Opinga</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                            <li><a href="shop.html">Driving Moccasins</a></li>
-									                            <li><a href="shop.html">High Heeled</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
+									                            <li><a href="shop.php">Opinga</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
+									                            <li><a href="shop.php">Driving Moccasins</a></li>
+									                            <li><a href="shop.php">High Heeled</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Product Types</a>
+							                				<a href="shop.php" class="megamenu-title">Product Types</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                		</div>
@@ -150,8 +156,10 @@
 					        <div class="search-right">
 					        	<div class="menu-toggle"><span></span></div>
 					        	<div class="search-menu">
-						        	<input type="text" name="search" class="search-input" placeholder="Search text">
-						        	<input type="submit" name="submit" class="search-btn">
+									<form action="search-list.php" method="get">
+						        	<input type="text" name="user_text" class="search-input" placeholder="Search text">
+						        	<input type="submit" name="search" class="search-btn">
+									</form>
 						        	<div class="search-button-i transition">
 						        		<img src="images/search.png" class="position-r transition" alt="search">
 						        	</div>
@@ -172,12 +180,12 @@
 													<li> 
 													  	<a href="javascript:void(0)" class="close-cart"><i class="fa fa-times-circle"></i></a>
 													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
+													    	<a href="product-detail.php" class="pull-left"> 
 													    		<img alt="product" src="images/product-1.jpg">
 													    	</a>
 													      	<figcaption> 
 													      		<span>
-													      			<a href="product-detail.html">Men's Full Sleeves Collar Shirt</a>
+													      			<a href="product-detail.php">Men's Full Sleeves Collar Shirt</a>
 													      		</span>
 													        	<p class="cart-price">$14.99</p>
 													        	<div class="product-qty">
@@ -192,12 +200,12 @@
 													<li> 
 														<a class="close-cart"><i class="fa fa-times-circle"></i></a>
 													    <figure> 
-													    	<a href="product-detail.html" class="pull-left"> 
+													    	<a href="product-detail.php" class="pull-left"> 
 													    		<img alt="product" src="images/product-2.jpg">
 													    	</a>
 													      	<figcaption> 
 													      		<span>
-													      			<a href="product-detail.html">Women's Cape Jacket</a>
+													      			<a href="product-detail.php">Women's Cape Jacket</a>
 													      		</span>
 													        	<p class="cart-price">$14.99</p>
 													        	<div class="product-qty">
@@ -238,8 +246,8 @@
 							</div>
 							<div class="col-xl-6 col-lg-6 col-12">
 								<ul class="right-side">
-									<li><a href="index.html">Home</a></li>
-									<li>Shop</li>
+									<li><a href="indexx.php">Home</a></li>
+									<li>Shop-List</li>
 								</ul>
 							</div>
 						</div>
@@ -489,45 +497,45 @@
 										<div class="seller">
 											<div class="seller-box align-flax w-100 pb-10">
 												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
+													<a href="product-detail.php" class="display-b">
 														<img src="images/product-1.jpg" alt="shoes" class="transition">
 													</a>
 												</div>
 												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
+													<a href="product-detail.php" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
 													<span class="product-pricce">$478.00</span>
 												</div>
 											</div>
 											<div class="seller-box align-flax w-100 pb-10">
 												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
+													<a href="product-detail.php" class="display-b">
 														<img src="images/product-7.jpg" alt="shoes" class="transition">
 													</a>
 												</div>
 												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">BUSCIPIT AT MAGNA</a>
+													<a href="product-detail.php" class="product-name text-uppercase">BUSCIPIT AT MAGNA</a>
 													<span class="product-pricce">$478.00</span>
 												</div>
 											</div>
 											<div class="seller-box align-flax w-100 pb-10">
 												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
+													<a href="product-detail.php" class="display-b">
 														<img src="images/product-3.jpg" alt="shoes" class="transition">
 												</a>
 												</div>
 												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
+													<a href="product-detail.php" class="product-name text-uppercase">AENEAN SAGITTIS</a>
 													<span class="product-pricce">$478.00</span>
 												</div>
 											</div>
 											<div class="seller-box align-flax w-100">
 												<div class="seller-img">
-													<a href="product-detail.html" class="display-b">
+													<a href="product-detail.php" class="display-b">
 														<img src="images/product-1.jpg" alt="shoes" class="transition">
 													</a>
 												</div>
 												<div class="seller-contain pl-15">
-													<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
+													<a href="product-detail.php" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
 													<span class="product-pricce">$478.00</span>
 												</div>
 											</div>
@@ -541,15 +549,15 @@
 						        <div class="row align-flax">
 						            <div class="col-xl-6 col-lg-5 col-md-6 mb-r-15">
 						                <div class="view">
-						                  	<div class="list-types grid active"> 
-						                  		<a href="shop.html">
+						                  	<div class="list-types grid"> 
+						                  		<a href="shop.php">
 						                    		<div class="grid-icon list-types-icon">
 						                    			<i class="fa fa-th-large transition" aria-hidden="true"></i>
 						                    		</div>
 						                    	</a> 
 						                    </div>
-						                  	<div class="list-types list"> 
-						                  		<a href="shop-list.html">
+						                  	<div class="list-types list active"> 
+						                  		<a href="shop-list.php">
 						                    		<div class="list-icon list-types-icon">
 						                    			<i class="fa fa-bars transition" aria-hidden="true"></i>
 						                    		</div>
@@ -585,378 +593,62 @@
 						   	</div>
 							<div class="featured">
 								<div class="row">
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-1.jpg" alt="product" class="transition">
+
+								<?php				   
+							$query='SELECT * FROM main_product WHERE hide_show="1"';
+						   $result=mysqli_query($mysqli,$query);
+						   $num_per_page=8;
+
+						   if(isset($_GET['page'])){
+							   $page=$_GET['page'];
+
+						   }else{
+								$page=1;
+						   }
+                           
+						   $start_from=($page-1)*8;
+						   $query = "SELECT * FROM main_product WHERE hide_show='1' ORDER BY id DESC LIMIT $start_from, $num_per_page";
+						   $result1=mysqli_query($mysqli,$query);
+
+						   while($row=mysqli_fetch_assoc($result1)){
+							 
+
+				   ?>
+									<div class="featured-product featured-product-list align-flax mb-25">
+										<div class="product-img transition">
+											<a href="product-detail.php?id=<?php echo $row['id']?>">
+												<img src="php/product-img/<?php echo $row['image']?>" alt="product" class="transition">
 											</a>
 											<div class="new-label">
 												<span class="text-uppercase">New</span>
 											</div>
 											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
+												<a href="product-quick-view.php?id=<?php echo $row['id']?>" class="quick-popup">Quick View</a>
 											</div>
 										</div>
 										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-											<span class="product-pricce">$478.00</span>
+											<a href="product-detail.php?id=<?php echo $row['id']?>" class="product-name text-uppercase"><?php echo $row['name']?></a>
+											<span class="product-pricce"><?php echo $row['sum']?></span>
+											<p class="product-detail-desc"><?php echo $row['main_text']?></p>
+											<div class="product-action">
+												<ul>
+													<li>
+														<a href="cart.php?id=<?php echo $row['id']?>" class="btn btn-color">
+															<img src="images/shop-bag.png" alt="bag">
+															<span>add to cart</span>
+														</a>
+													</li>
+													<li>
+														<a href="wishlist.php?id=<?php echo $row['id']?>" class="btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
+													</li>
+												</ul>
+											</div>
 										</div>
 									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-2.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN EU TRISTIQUE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-3.jpg" alt="product" class="transition">
-											</a>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-4.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc" data-category="accessories">
-											<a href="product-detail.html" class="product-name text-uppercase">ALIQUAM LOBORTIS EST</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-5.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AUCTOR GRAVIDA ENIM</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-6.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BLIQUAM LOBORTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-7.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BUSCIPIT AT MAGNA</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-8.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">CONDIMENTUM POSUERE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-9.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">DIGNISSIM VENENATIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-10.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">ELEIFEND ARCU</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-1.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-2.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN EU TRISTIQUE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-3.jpg" alt="product" class="transition">
-											</a>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-4.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc" data-category="accessories">
-											<a href="product-detail.html" class="product-name text-uppercase">ALIQUAM LOBORTIS EST</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-5.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AUCTOR GRAVIDA ENIM</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-6.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BLIQUAM LOBORTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-7.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">BUSCIPIT AT MAGNA</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-8.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">CONDIMENTUM POSUERE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-9.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">DIGNISSIM VENENATIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-10.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">ELEIFEND ARCU</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-1.jpg" alt="product" class="transition">
-											</a>
-											<div class="new-label">
-												<span class="text-uppercase">New</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">men's harpoon 2 eye boot</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-2.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN EU TRISTIQUE</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-3.jpg" alt="product" class="transition">
-											</a>
-											<div class="sale-label">
-												<span class="text-uppercase">sale</span>
-											</div>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc">
-											<a href="product-detail.html" class="product-name text-uppercase">AENEAN SAGITTIS</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
-									<div class="featured-product mb-25">
-										<div class="product-img transition mb-15">
-											<a href="product-detail.html">
-												<img src="images/product-4.jpg" alt="product" class="transition">
-											</a>
-											<div class="product-details-btn text-uppercase text-center transition">
-												<a href="product-quick-view.html" class="quick-popup">Quick View</a>
-											</div>
-										</div>
-										<div class="product-desc" data-category="accessories">
-											<a href="product-detail.html" class="product-name text-uppercase">ALIQUAM LOBORTIS EST</a>
-											<span class="product-pricce">$478.00</span>
-										</div>
-									</div>
+									
+									<?php
+								} ?>
+								
 								</div>
 							</div>
 							<div class="shorting pagination-1 mt-20">
@@ -964,10 +656,19 @@
 						            <div class="col-lg-6 col-md-6">
 						                <div class="pagination-bar">
 					                      	<ul>
-					                        	<li class="active"><a href="#">1</a></li>
-					                        	<li><a href="#">2</a></li>
-					                        	<li><a href="#">3</a></li>
-					                        	<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+											  <?php 
+													$query='SELECT * FROM main_product WHERE hide_show="1" ORDER BY id DESC';
+													$result=mysqli_query($mysqli,$query);
+                                                    $total_records=mysqli_num_rows($result);
+													$total_pages=ceil($total_records/$num_per_page);
+
+
+												for($i=1;$i<=$total_pages;$i++){
+												?>
+					                        	<li class="active"><a href="shop-list.php?page=<?php echo $i?>"><?php echo $i?></a></li>
+												<?php 
+												}
+												?>
 					                      	</ul>
 					                    	</div>
 						              	</div>
@@ -1010,7 +711,7 @@
 					<div class="footer-inner">
 						<div class="footer-box">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="indexx.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
 						</div>
@@ -1020,7 +721,7 @@
 							<ul class="footer-block-contant">
 								<li><a href="#">My Account</a></li>
 								<li><a href="#">Order History</a></li>
-								<li><a href="wishlist.html">Wish List</a></li>
+								<li><a href="wishlist.php">Wish List</a></li>
 								<li><a href="#">Newsletter</a></li>
 								<li><a href="#">Site Map</a></li>
 								<li><a href="#">Gift Certificates</a></li>
