@@ -122,11 +122,11 @@
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-							                			<li><a href="about.html">About Us</a></li>
+							                			<li><a href="about.php">About Us</a></li>
 									                    <li><a href="shop-list.php">Shop List</a></li>
 									                    <li><a href="product-detail.php">Product Detail</a></li>
 									                    <li><a href="wishlist.php">Wishlist</a></li>
-									                    <li><a href="404.html">404</a></li>
+									                    <li><a href="404.php">404</a></li>
 									                </ul>
 							                	</div>
 							                </div>
@@ -190,19 +190,19 @@
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="blog-left.html">Blog</a>
+							                <a href="blog-left.php">Blog</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-									                    <li><a href="blog-left.html">Blog Left</a></li>
-									                    <li><a href="blog-right.html">Blog Right</a></li>
-									                    <li><a href="blog-detail.html">Blog Detail</a></li>
+									                    <li><a href="blog-left.php">Blog Left</a></li>
+									                    <li><a href="blog-right.php">Blog Right</a></li>
+									                    <li><a href="blog-detail.php">Blog Detail</a></li>
 									                </ul>
 							                	</div>
 							                </div>
 							            </li>
 							            <li>
-							                <a href="contact.html">Contact</a>
+							                <a href="contact.php">Contact</a>
 							            </li>
 						            </ul>
 						        </div>
@@ -286,7 +286,7 @@
 												<div class="clearfix"></div>
 												<div class="mt-20"> 
 													<a href="cart.php" class="btn">Cart</a> 
-													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
+													<a href="checkout.php" class="btn btn-color right-side">Checkout</a> 
 												</div>
 											</div>
 								        </div>
@@ -344,12 +344,12 @@
 										<td class="text-left">
 											<div class="seller-box align-flax w-100">
 												<div class="seller-img">
-													<a href="product-detail.php" class="display-b">
+													<a href="product-detail.php?id=<?php echo$row1['product_id']?>" class="display-b">
 														<img src="php/product-img/<?php echo $row1['image'];?>" alt="shoes" class="transition">
 													</a>
 												</div>
 												<div class="seller-contain pl-15">
-													<a href="product-detail.php?id=<?php echo $row1['id']?>" class="product-name text-uppercase"><?php echo $row1['name'];?></a>
+													<a href="product-detail.php?id=<?php echo $row1['product_id']?>" class="product-name text-uppercase"><?php echo $row1['name'];?></a>
 												</div>
 											</div>
 										</td>
@@ -467,7 +467,7 @@
 											</table>
 										</div>
 										<div class="share-wishlist">
-											<a href="checkout.html" class="btn btn-color">Proceed to checkout <i class="fa fa-angle-right"></i></a>
+											<a href="checkout.php" class="btn btn-color">Proceed to checkout <i class="fa fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -524,11 +524,11 @@
 							<span class="opener plus"></span>
 							<h2 class="footer-title text-uppercase">Information</h2>
 							<ul class="footer-block-contant">
-								<li><a href="about.html">About Us</a></li>
+								<li><a href="about.php">About Us</a></li>
 								<li><a href="#">Delivery Information</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="contact.php">Contact Us</a></li>
 								<li><a href="#">Brands</a></li>
 							</ul>
 						</div>

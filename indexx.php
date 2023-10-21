@@ -76,7 +76,7 @@
 					<div class="row">
 						<div class="col-lg-2 col-md-4 col-6 align-flax">
 				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
+					            <a class="navbar-brand" href="indexx.php">
 					                <img alt="log" src="images/logo.png" class="transition">
 					            </a> 
 				            </div>
@@ -86,26 +86,26 @@
 						        <div class="menu" >
 						            <ul>
 							            <li>
-							                <a href="index.html">Home</a>
+							                <a href="indexx.php">Home</a>
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Pages</a>
+							                <a href="shop.php">Pages</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-							                			<li><a href="about.html">About Us</a></li>
-									                    <li><a href="shop-list.html">Shop List</a></li>
+							                			<li><a href="about.php">About Us</a></li>
+									                    <li><a href="shop-list.php">Shop List</a></li>
 									                    <li><a href="product-detail.php">Product Detail</a></li>
-									                    <li><a href="wishlist.html">Wishlist</a></li>
-									                    <li><a href="404.html">404</a></li>
+									                    <li><a href="wishlist.php">Wishlist</a></li>
+									                    <li><a href="404.php">404</a></li>
 									                </ul>
 							                	</div>
 							                </div>
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="shop.html">Shop</a>
+							                <a href="shop.php">Shop</a>
 							                <div class="megamenu full">
 							                	<div class="megamenu-inner">
 							                		<div class="row">
@@ -121,39 +121,39 @@
 							                				</div>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Chap Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Chap Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Fashion Shoes</a>
+							                				<a href="shop.php" class="megamenu-title">Fashion Shoes</a>
 							                				<ul>
-									                            <li><a href="shop.html">Opinga</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
-									                            <li><a href="shop.html">Driving Moccasins</a></li>
-									                            <li><a href="shop.html">High Heeled</a></li>
-									                            <li><a href="shop.html">Rocker Bottom</a></li>
-									                            <li><a href="shop.html">Clog</a></li>
+									                            <li><a href="shop.php">Opinga</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
+									                            <li><a href="shop.php">Driving Moccasins</a></li>
+									                            <li><a href="shop.php">High Heeled</a></li>
+									                            <li><a href="shop.php">Rocker Bottom</a></li>
+									                            <li><a href="shop.php">Clog</a></li>
 									                        </ul>
 							                			</div>
 							                			<div class="col-xl-3 col-lg-3 col-md-12">
-							                				<a href="shop.html" class="megamenu-title">Product Types</a>
+							                				<a href="shop.php" class="megamenu-title">Product Types</a>
 							                				<ul>
-									                            <li><a href="shop.html">Hessian Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
-									                            <li><a href="shop.html">Postillion Shoes</a></li>
-									                            <li><a href="shop.html">Cowboy Shoes</a></li>
-									                            <li><a href="shop.html">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Hessian Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
+									                            <li><a href="shop.php">Postillion Shoes</a></li>
+									                            <li><a href="shop.php">Cowboy Shoes</a></li>
+									                            <li><a href="shop.php">Paddock Shoes</a></li>
 									                        </ul>
 							                			</div>
 							                		</div>
@@ -162,19 +162,19 @@
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="blog-left.html">Blog</a>
+							                <a href="blog-left.php">Blog</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-									                    <li><a href="blog-left.html">Blog Left</a></li>
-									                    <li><a href="blog-right.html">Blog Right</a></li>
-									                    <li><a href="blog-detail.html">Blog Detail</a></li>
+									                    <li><a href="blog-left.php">Blog Left</a></li>
+									                    <li><a href="blog-right.php">Blog Right</a></li>
+									                    <li><a href="blog-detail.php">Blog Detail</a></li>
 									                </ul>
 							                	</div>
 							                </div>
 							            </li>
 							            <li>
-							                <a href="contact.html">Contact</a>
+							                <a href="contact.php">Contact</a>
 							            </li>
 						            </ul>
 						        </div>
@@ -251,7 +251,7 @@
 												<div class="clearfix"></div>
 												<div class="mt-20"> 
 													<a href="cart.php" class="btn">Cart</a> 
-													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
+													<a href="checkout.php" class="btn btn-color right-side">Checkout</a> 
 												</div>
 											</div>
 								        </div>
@@ -598,51 +598,51 @@
 							<div class="row align-flax pr-30">
 								<div class="col-xl-5 col-lg-5 col-md-5">
 									<div class="latest-blog-img">
-										<a href="blog-detail.html" class="display-b">
+										<a href="blog-detail.php" class="display-b">
 											<img src="images/blog-1.jpg" alt="blog">
 										</a>
 									</div>
 								</div>
 								<div class="col-xl-7 col-lg-7 col-md-7">
 									<div class="lat-blog-desc">
-										<a href="blog-detail.html" class="lat-blog-title text-uppercase">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+										<a href="blog-detail.php" class="lat-blog-title text-uppercase">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
 										<p class="lat-blog-date text-uppercase"><span>john doe</span> - APRIL 18, 2015 AT 5.00 PM</p>
 										<p class="lat-blog-detail">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even</p>
-										<a href="blog-detail.html" class="btn-2">Read More</a>
+										<a href="blog-detail.php" class="btn-2">Read More</a>
 									</div>
 								</div>
 							</div>
 							<div class="row align-flax pr-30">
 								<div class="col-xl-5 col-lg-5 col-md-5">
 									<div class="latest-blog-img">
-										<a href="blog-detail.html" class="display-b">
+										<a href="blog-detail.php" class="display-b">
 											<img src="images/blog-2.jpg" alt="blog">
 										</a>
 									</div>
 								</div>
 								<div class="col-xl-7 col-lg-7 col-md-7">
 									<div class="lat-blog-desc">
-										<a href="blog-detail.html" class="lat-blog-title text-uppercase">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+										<a href="blog-detail.php" class="lat-blog-title text-uppercase">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
 										<p class="lat-blog-date text-uppercase"><span>john doe</span> - APRIL 18, 2015 AT 5.00 PM</p>
 										<p class="lat-blog-detail">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even</p>
-										<a href="blog-detail.html" class="btn-2">Read More</a>
+										<a href="blog-detail.php" class="btn-2">Read More</a>
 									</div>
 								</div>
 							</div>
 							<div class="row align-flax pr-30">
 								<div class="col-xl-5 col-lg-5 col-md-5">
 									<div class="latest-blog-img">
-										<a href="blog-detail.html" class="display-b">
+										<a href="blog-detail.php" class="display-b">
 											<img src="images/blog-1.jpg" alt="blog">
 										</a>
 									</div>
 								</div>
 								<div class="col-xl-7 col-lg-7 col-md-7">
 									<div class="lat-blog-desc">
-										<a href="blog-detail.html" class="lat-blog-title text-uppercase">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+										<a href="blog-detail.php" class="lat-blog-title text-uppercase">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
 										<p class="lat-blog-date text-uppercase"><span>john doe</span> - APRIL 18, 2015 AT 5.00 PM</p>
 										<p class="lat-blog-detail">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even</p>
-										<a href="blog-detail.html" class="btn-2">Read More</a>
+										<a href="blog-detail.php" class="btn-2">Read More</a>
 									</div>
 								</div>
 							</div>
@@ -732,11 +732,11 @@
 							<span class="opener plus"></span>
 							<h2 class="footer-title text-uppercase">Information</h2>
 							<ul class="footer-block-contant">
-								<li><a href="about.html">About Us</a></li>
+								<li><a href="about.php">About Us</a></li>
 								<li><a href="#">Delivery Information</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="contact.php">Contact Us</a></li>
 								<li><a href="#">Brands</a></li>
 							</ul>
 						</div>

@@ -43,7 +43,7 @@
 					<div class="row">
 						<div class="col-lg-2 col-md-4 col-6 align-flax">
 				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
+					            <a class="navbar-brand" href="indexx.php">
 					                <img alt="logo" src="images/logo.png" class="transition">
 					            </a> 
 				            </div>
@@ -53,7 +53,7 @@
 						        <div class="menu" >
 						            <ul>
 							            <li>
-							                <a href="index.html">Home</a>
+							                <a href="indexx.php">Home</a>
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
@@ -237,7 +237,7 @@
 							</div>
 							<div class="col-xl-6 col-lg-6 col-12">
 								<ul class="right-side">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="indexx.php">Home</a></li>
 									<li>Register</li>
 								</ul>
 							</div>
@@ -324,7 +324,7 @@
 					<div class="footer-inner">
 						<div class="footer-box">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="indexx.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
 						</div>

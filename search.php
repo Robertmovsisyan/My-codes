@@ -53,7 +53,7 @@ if(!$mysqli){
 					<div class="row">
 						<div class="col-lg-2 col-md-4 col-6 align-flax">
 				            <div class="navbar-header">
-					            <a class="navbar-brand" href="index.html">
+					            <a class="navbar-brand" href="indexx.php">
 					                <img alt="logo" src="images/logo.png" class="transition">
 					            </a> 
 				            </div>
@@ -63,7 +63,7 @@ if(!$mysqli){
 						        <div class="menu" >
 						            <ul>
 							            <li>
-							                <a href="index.html">Home</a>
+							                <a href="indexx.php">Home</a>
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
@@ -71,11 +71,11 @@ if(!$mysqli){
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-							                			<li><a href="about.html">About Us</a></li>
+							                			<li><a href="about.php">About Us</a></li>
 									                    <li><a href="shop-list.php">Shop List</a></li>
 									                    <li><a href="product-detail.php">Product Detail</a></li>
 									                    <li><a href="wishlist.php">Wishlist</a></li>
-									                    <li><a href="404.html">404</a></li>
+									                    <li><a href="404.php">404</a></li>
 									                </ul>
 							                	</div>
 							                </div>
@@ -139,19 +139,19 @@ if(!$mysqli){
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="blog-left.html">Blog</a>
+							                <a href="blog-left.php">Blog</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-									                    <li><a href="blog-left.html">Blog Left</a></li>
-									                    <li><a href="blog-right.html">Blog Right</a></li>
-									                    <li><a href="blog-detail.html">Blog Detail</a></li>
+									                    <li><a href="blog-left.php">Blog Left</a></li>
+									                    <li><a href="blog-right.php">Blog Right</a></li>
+									                    <li><a href="blog-detail.php">Blog Detail</a></li>
 									                </ul>
 							                	</div>
 							                </div>
 							            </li>
 							            <li>
-							                <a href="contact.html">Contact</a>
+							                <a href="contact.php">Contact</a>
 							            </li>
 						            </ul>
 						        </div>
@@ -170,7 +170,7 @@ if(!$mysqli){
 						        <ul class="login-cart">
 						        	<li>
 						        		<div class="login-head">
-								        	<a href="login.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+								        	<a href="login.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 								        </div>
 						        	</li>
 						        	<li>
@@ -227,8 +227,8 @@ if(!$mysqli){
 												</p>
 												<div class="clearfix"></div>
 												<div class="mt-20"> 
-													<a href="cart.html" class="btn">Cart</a> 
-													<a href="checkout.html" class="btn btn-color right-side">Checkout</a> 
+													<a href="cart.php" class="btn">Cart</a> 
+													<a href="checkout.php" class="btn btn-color right-side">Checkout</a> 
 												</div>
 											</div>
 								        </div>
@@ -249,7 +249,7 @@ if(!$mysqli){
 							</div>
 							<div class="col-xl-6 col-lg-6 col-12">
 								<ul class="right-side">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="indexx.php">Home</a></li>
 									<li>Shop</li>
 								</ul>
 							</div>
@@ -711,7 +711,7 @@ if(!$mysqli){
 					<div class="footer-inner">
 						<div class="footer-box">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="indexx.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
 						</div>
@@ -731,11 +731,11 @@ if(!$mysqli){
 							<span class="opener plus"></span>
 							<h2 class="footer-title text-uppercase">Information</h2>
 							<ul class="footer-block-contant">
-								<li><a href="about.html">About Us</a></li>
+								<li><a href="about.php">About Us</a></li>
 								<li><a href="#">Delivery Information</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="contact.php">Contact Us</a></li>
 								<li><a href="#">Brands</a></li>
 							</ul>
 						</div>

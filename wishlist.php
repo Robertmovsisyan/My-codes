@@ -82,11 +82,11 @@ if (isset($_GET['id'])) {
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-							                			<li><a href="about.html">About Us</a></li>
+							                			<li><a href="about.php">About Us</a></li>
 									                    <li><a href="shop-list.php">Shop List</a></li>
 									                    <li><a href="product-detail.php">Product Detail</a></li>
 									                    <li><a href="wishlist.php">Wishlist</a></li>
-									                    <li><a href="404.html">404</a></li>
+									                    <li><a href="404.php">404</a></li>
 									                </ul>
 							                	</div>
 							                </div>
@@ -150,19 +150,19 @@ if (isset($_GET['id'])) {
 							            </li>
 							            <li class="dropdown">
 							            	<span class="opener plus"></span>
-							                <a href="blog-left.html">Blog</a>
+							                <a href="blog-left.php">Blog</a>
 							                <div class="megamenu">
 							                	<div class="megamenu-inner">
 							                		<ul>
-									                    <li><a href="blog-left.html">Blog Left</a></li>
-									                    <li><a href="blog-right.html">Blog Right</a></li>
-									                    <li><a href="blog-detail.html">Blog Detail</a></li>
+									                    <li><a href="blog-left.php">Blog Left</a></li>
+									                    <li><a href="blog-right.php">Blog Right</a></li>
+									                    <li><a href="blog-detail.php">Blog Detail</a></li>
 									                </ul>
 							                	</div>
 							                </div>
 							            </li>
 							            <li>
-							                <a href="contact.html">Contact</a>
+							                <a href="contact.php">Contact</a>
 							            </li>
 						            </ul>
 						        </div>
@@ -375,11 +375,11 @@ if (isset($_GET['id'])) {
 							<span class="opener plus"></span>
 							<h2 class="footer-title text-uppercase">Information</h2>
 							<ul class="footer-block-contant">
-								<li><a href="about.html">About Us</a></li>
+								<li><a href="about.php">About Us</a></li>
 								<li><a href="#">Delivery Information</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="contact.php">Contact Us</a></li>
 								<li><a href="#">Brands</a></li>
 							</ul>
 						</div>
